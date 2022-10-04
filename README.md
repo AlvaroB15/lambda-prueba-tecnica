@@ -1,14 +1,63 @@
 # PRUEBA TECNICA - ALVARO BEGAZO CARHUAYO
 
+URL de los lambdas.
+
+POST ```https://wih9qhb4eg.execute-api.us-east-1.amazonaws.com/dev/generar-token```
+
+
+
+```
+    // Body
+    {
+        "token": "AzrHlhxvwQEdZ3Nm"
+    }
+
+    // Headers 
+    Content-Type            application/json
+    token_authorization     pk_test_LsRBKejzCOEEWOsw
+
+```
+
+POST ```https://wih9qhb4eg.execute-api.us-east-1.amazonaws.com/dev/data-token```
+
+La data provisional para las pruebas 
+
+```
+    // Body
+    {
+        "email": "prueba.test@gmail.com",
+        "card_number": "4557880616004374",
+        "cvv": "123",
+        "expiration_year": "2027",
+        "expiration_month": "12"
+    }
+
+    // Headers 
+    Content-Type            application/json
+    token_authorization     pk_test_LsRBKejzCOEEWOsw
+
+```
+
+Para solo importar un .json en el postman, descargar del siguiente link
+
+https://drive.google.com/file/d/1ml4cSIxJ0vH3YuhYwX1NKphBgnXAdFxP/view?usp=sharing
+
+
 Para poder ejecutar el linter
 
 ```npm run lint ```
 
-Para poder ejecutar los test. El test de cardController.spec.ts, se llego a implementar, pero debido a que hubo problemas de configuracion al parecer, y no pude solucionarlo, solo deje un simple test prueba, por si quiere ver el error que sale al momento de descomentar las lineas, ademas que un par de errores mas, como que el controller, en si ya esta esperando un event del lambda, al declarar un objeto con el tipado correspondiente, y copiar el valor que me bota en la consola del lambda, ese log no me da alguna propiedades como el authorizer, y tube que cambiar de forma local, lo cual no es lo idoneo.
+Para hacer el build de produccion
+
+```npm run build```
+
+Para poder ejecutar los test. 
+
+El test de cardController.spec.ts, se llego a implementar, pero debido a que hubo problemas de configuracion al parecer, y no pude solucionarlo, solo deje un simple test prueba, por si quiere ver el error que sale al momento de descomentar las lineas, ademas que un par de errores mas, como que el controller, en si ya esta esperando un event del lambda, al declarar un objeto con el tipado correspondiente, y copiar el valor que me bota en la consola del lambda, ese log no me da alguna propiedades como el authorizer, y tube que cambiar de forma local, lo cual no es lo idoneo.
 
 ```npm run test```
 
-## - Para levantar de forma local, se realizo otro proyecto, ese fue el primero, pero luego para el lambda cambie la estructura.
+## - Para levantar de forma local, se realizo otro proyecto, ese fue el primero, pero luego se cambio la estructura y salio este repo para el lambda.
 
 ```git clone https://github.com/AlvaroB15/prueba-tecnica```
 
