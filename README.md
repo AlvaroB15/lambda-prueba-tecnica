@@ -59,7 +59,9 @@ El test de cardController.spec.ts, se llego a implementar, pero debido a que hub
 
 ## - Para levantar de forma local, se realizo otro proyecto, ese fue el primero, pero luego se cambio la estructura y salio este repo para el lambda.
 
-```git clone https://github.com/AlvaroB15/prueba-tecnica```
+Url del repo https://github.com/AlvaroB15/prueba-tecnica
+
+```git clone https://github.com/AlvaroB15/prueba-tecnica.git```
 
 Tiene su propio readme ese repositorio
 
